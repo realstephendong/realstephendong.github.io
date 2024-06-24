@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="aboutstyles.css">
+</head>
+<body>
+  <!--Navigation Bar-->
+  <header class="header">
+    <nav class="navbar">
+      <div class = "left">
+        <a href="index.html" class="logo">
+          <img src="images/websitelogo.png">
+        </a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+      </div>
+
+      <div class = "right">
+        <a href="https://github.com/realstephendong" target="_blank" class ="right1">
+          <img src="images/githublogo.png">
+        </a>
+        <a href="https://www.linkedin.com/in/stephen-dong/" target="_blank" class="right2">
+          <img src="images/linkedin.png">
+        </a>
+        <a href="mailto:realstephendong@gmail.com" class="right3">
+          <img src="images/emaillogo.png">
+        </a>
+      </div>
+    </nav>
+  </header>
+  
+  <!--Webpage begins-->
+  <main>
+    <div class="aboutmepage" data-aos="fade-right" data-aos-duration="1000">
+      <!--Sidebar-->
+      <div class="sidebar">
+        <div id="bar1">
+          <div class="barcircle"></div>
+          <div class="bar1" data-aos="fade-down" data-aos-duration="1500"></div>
+        </div>
+      
+        <div id="buttoncontainer"> 
+          <div class="sidebarbutton"></div>
+          <a class="btntext">&lt;&gt;</a>
+        </div>
+
+        <div class="bar2" data-aos="fade-up" data-aos-duration="1500"></div>
+      </div>
+
+      <!--About me section begins-->
+      <div>
+        <div class="aboutrow" data-aos="fade-right" data-aos-duration="1000">
+          <div class="column desc" data-aos="zoom-in">
+              <h1 id="abouttitle">About Me</h1>
+              <p>
+                My name is <span id="bold">Stephen.</span> I am an 18-year-old from Canada, currently studying 
+                <span id="bold">Computer Engineering</span> at the <span id="bold">University of Waterloo.</span>
+              <br> <br>
+              I'm all about <span id="bold">exploring</span> new areas in tech, <span id="bold">contributing</span> inspiring ideas, and <span id="bold">making a change</span> wherever I end up. 
+                Technology, in my eyes, is my key to doing just that. 
+              <br><br> In addition to programming, I am eager to challenge myself to learn new things 
+                everyday. (For example, if you have constructive criticism about this newly-made website, I would be very glad to hear them) I 
+                also enjoy working out and am oddly talented at cooking...
+              </p>
+          </div>
+          <div class="column image">
+              <img src="images/descpic.png" />
+          </div>
+        </div>
+      </div>
+    
+      
+    </div>
+    
+    <!--Footer begins-->
+    <footer class="footer" data-aos="fade-up" data-aos-duration="500">
+      <div>
+        <h1 class="foottitle">Let's get in touch.</h1>
+        <p class="footpara">Now that you know me, let me get to know you!</p>
+        <div class="footerbtncontainer">
+          <a href="https://github.com/realstephendong" target="_blank" class="glowbtn">Github <span class="arrow">➜</span></a>
+          <div class="footbtnseparator"></div>
+          <a href="https://www.linkedin.com/in/stephen-dong/" target="_blank" class="glowbtn">LinkedIn <span class="arrow">➜</span></a>
+          <div class="footbtnseparator"></div>
+          <a href="mailto:realstephendong@gmail.com" class="glowbtn">Email <span class="arrow">➜</span></a>
+        </div>
+        <p class="footpara2">Coded and designed by Stephen Dong</p>
+      </div>
+    </footer>
+  </main>
+
+  
+  
+  <!--Scripts-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            document.querySelector('html').classList.remove('no-js');
+            if (!window.Cypress) {
+              const scrollCounter = document.querySelector('.js-scroll-counter');
+      
+              AOS.init({
+                mirror: true
+              });
+      
+              document.addEventListener('aos:in', function(e) {
+                console.log('in!', e.detail);
+              });
+      
+              window.addEventListener('scroll', function() {
+                scrollCounter.innerHTML = window.pageYOffset;
+              });
+            }
+          </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        const headerOffset = 200; 
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+  </script>
+</body>
+</html>

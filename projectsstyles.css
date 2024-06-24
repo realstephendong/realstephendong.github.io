@@ -1,0 +1,268 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  scroll-behavior: smooth;
+  color: #E6EDF3;
+}
+
+body {
+  min-height: 100vh;
+  background: #0D1117;
+} 
+
+#bold {
+  font-weight: 600;
+  color: rgb(32, 32, 32);
+  background-image: linear-gradient(to right, #96d6a8, #6fb3cc);
+  border-radius: 3px;
+  padding: 3px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+/*Navigation bar*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 40px;
+  background: #0D1117;
+  z-index: 100;
+}
+
+.navbar {
+  color: #E6EDF3;
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+}
+
+.left, .right {
+  display: flex;
+  align-items: center;
+}
+
+.left a {
+  color: #E6EDF3;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-right: 50px; /* Adjust spacing between links */
+  transition: 0.2s ease;
+}
+
+.left .logo:hover {
+  opacity:0.7
+  
+}
+
+.right a {
+  border-radius: 4px;
+  margin-right: 25px;
+  transition: 0.2s ease;
+}
+
+.left a:hover {
+  color: #B2BCC3;
+  border-radius: 4px;
+}
+
+.right .right1:hover,.right .right2:hover,.right .right3:hover   {
+  opacity: 0.7;
+}
+/*Navigation bar ends*/
+
+/*Button CSS*/
+.glowbtn {
+  display: inline-block;
+  padding: 10px 60px;
+  color:#ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 2px solid #6F68D4;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+.glowbtn:hover {
+  background: #6F68D4; 
+  box-shadow: 0 0 5px #6F68D4, 0 0 25px #6F68D4, 0 0 50px #6F68D4, 0 0 100px #6F68D4;
+}
+
+.glowbtn .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.glowbtn:hover .arrow {
+  transform: translateX(10px);
+}
+/*Button CSS Ends */
+
+/*Projects Page*/
+.projectspage {
+  display: flex;
+}
+
+/*Page Title*/
+.projtitle {
+  padding: 0 10% 0 8%;
+  color: white;
+  margin-top: 100px;
+}
+
+.projtitle h1 {
+  font-size: 60px;
+  color: lightblue;
+}
+/*Page Title Ends*/
+
+/*Projects section begins*/
+.projects {
+  padding: 0 10% 5% 8%;
+}
+
+.projrow {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.projrow:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: right;
+}
+
+.desc {
+  width: 50%;
+  padding: 0 0 0 0;
+}
+
+#proj1 {
+  font-size: 40px;
+  color: lightblue;
+  padding: 0 0 5% 0;
+}
+
+#proj2 {
+  font-size: 40px;
+  color: lightgreen;
+  padding: 0 0 5% 0;
+}
+
+.desc p {
+  line-height: 35px;
+}
+
+.image {
+  padding: 0 5% 5% 0;
+  width: 50%;
+  transition: 0.4s ease;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .column {
+      width: 100%;
+  }
+  
+  .image {
+    padding: 10% 0 10% 0;
+  }
+}
+
+/*Footer begins */
+.footer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #007a47;
+  animation: color 8s ease-in-out infinite;
+  z-index: 100;
+  padding: 5% 10% 5% 10%;
+}
+
+@keyframes color {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.foottitle {
+  color: #E6EDF3;
+  font-size: 50px;
+  font-weight: 600;
+  outline: none;
+  animation: animate 8s ease infinite; 
+}
+
+@keyframes animate {
+  0%, 40%, 80%
+  {
+    color: #E6EDF3;
+    text-shadow: none;
+
+  }
+  20%, 60%
+  {
+    color: white;
+    text-shadow: 0 0 10px #E6EDF3,
+      0 0 15px #E6EDF3,
+      0 0 20px #E6EDF3,
+      0 0 35px #E6EDF3,
+      0 0 50px #E6EDF3;
+  }
+}
+
+.footpara {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #E6EDF3;
+}
+
+.footbtnseparator {
+  display: inline;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  margin-left: 22px;
+  margin-right: 25px;
+  border-radius: 4px;
+  border-left: 2px solid #E6EDF3;
+}
+
+.footpara2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: #E6EDF3;
+  font-style: italic;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    height: 100%;
+    padding: 10% 10% 10% 10%;
+  }
+}

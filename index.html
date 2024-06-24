@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephen's Zen Garden</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!--Navigation Bar-->
+  <header class="header">
+    <nav class="navbar">
+      <div class = "left">
+        <a href="index.html" class="logo">
+          <img src="images/websitelogo.png">
+        </a>
+        <a href="#scrollaboutme">About</a>
+        <a href="#scrollprojects">Projects</a>
+      </div>
+
+      <div class = "right">
+        <a href="https://github.com/realstephendong" target="_blank" class ="right1">
+          <img src="images/githublogo.png">
+        </a>
+        <a href="https://www.linkedin.com/in/stephen-dong/" target="_blank" class="right2">
+          <img src="images/linkedin.png">
+        </a>
+        <a href="mailto:realstephendong@gmail.com" class="right3">
+          <img src="images/emaillogo.png">
+        </a>
+      </div>
+    </nav>
+  </header>
+  
+  <!--Webpage begins-->
+  <main>
+    <div class="homepage" id="scrollhomepage">
+      <!--Homepage title-->
+      <h1 data-aos="fade-right" data-aos-duration="1000">
+        <span id="typewriter"></span>
+        <span id="cursor">|</span><span id="iam">I am </span><span id="name">Stephen.</span>
+      </h1>
+      <br>
+      <p id="titlebody" data-aos="fade-right" data-aos-duration="1000">
+        Come take a look at what I’ve been up to!
+      </p>
+
+      <!--Homepage Projects and Linkedin Button-->
+      <div class="homebuttoncontainer" data-aos="fade-right" data-aos-duration="1000">
+        <a href="#scrollprojects" class="glowbtn">Projects <span class="arrow">➜</span></a>
+        <div class="btnseparator"></div>  
+        <a href="https://www.linkedin.com/in/stephen-dong/" class="glowbtn">LinkedIn <span class="arrow">➜</span></a>
+      </div>
+      
+      <!--About me-->
+      <div class="aboutme" data-aos="fade-right" data-aos-duration="1500">
+        <h1>About Me</h1>
+        <p><br><br>Greetings!<br><br>
+          I'm Stephen Dong, an 18-year-old from Canada, currently studying <span id='bold'>Computer Engineering</span> 
+          at the <span id='bold'>University of Waterloo...</span> <br><br>
+        </p>
+
+        <a href='about.html' class="glowbtn">Read more <span class="arrow">➜</span></a>
+      </div>
+
+      <!--Projects-->
+      <div class="projects" data-aos="fade-right" data-aos-duration="1500">
+        <h1>Projects</h1>
+          <div class="project1container">
+            <a href="#">
+              <img id="resize" src="images/project1.png">
+            </a>
+
+            <div class="project1textcontainer">
+              <h2>SuperMario in Java</h2>
+
+              <p>A <span id="bold">SuperMario game</span> with selectable levels, characters, and easter eggs made entirely using <span id="bold">Java's GUI</span> capabilities.</p>
+              
+              <a href="projects.html" class="glowbtn">See more <span class="arrow">➜</span></a>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+    <!--Sidebar-->
+    <div class="sidebar">
+      <div id="bar1">
+        <div class="barcircle"></div>
+        <div class="bar1" data-aos="fade-down" data-aos-duration="1500"></div>
+      </div>
+    
+      <div id="buttoncontainer">
+        <div class="sidebarbutton"></div>
+        <a class="btntext">&lt;&gt;</a>
+      </div>
+
+      <div class="bar2" data-aos="fade-up" data-aos-duration="1500"></div>
+
+      <div class="decoimage" data-aos="fade-up" data-aos-duration="1500">
+        <img src="images/deco1.png">
+      </div>
+
+      <!--About me bubble-->
+      <div class="aboutmebubble" id="scrollaboutme"></div>
+
+      <!--Projects bubble-->
+      <div class="projectsbubble" id="scrollprojects"></div>
+    </div>
+
+    <!--Footer begins-->
+    <footer class="footer" data-aos="fade-up" data-aos-duration="500">
+      <div>
+        <h1 class="foottitle">Let's get in touch.</h1>
+        <p class="footpara">Now that you know me, let me get to know you!</p>
+        <div class="footerbtncontainer">
+          <a href="https://github.com/realstephendong" target="_blank" class="glowbtn">Github <span class="arrow">➜</span></a>
+          <div class="footbtnseparator"></div>
+          <a href="https://www.linkedin.com/in/stephen-dong/" target="_blank" class="glowbtn">LinkedIn <span class="arrow">➜</span></a>
+          <div class="footbtnseparator"></div>
+          <a href="mailto:realstephendong@gmail.com" class="glowbtn">Email <span class="arrow">➜</span></a>
+        </div>
+        <p class="footpara2">Coded and designed by Stephen Dong</p>
+      </div>
+    </footer>
+  </main>
+  
+  <!--Scripts-->
+  <script src="typinganimation.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            document.querySelector('html').classList.remove('no-js');
+            if (!window.Cypress) {
+              const scrollCounter = document.querySelector('.js-scroll-counter');
+      
+              AOS.init({
+                mirror: true
+              });
+      
+              document.addEventListener('aos:in', function(e) {
+                console.log('in!', e.detail);
+              });
+      
+              window.addEventListener('scroll', function() {
+                scrollCounter.innerHTML = window.pageYOffset;
+              });
+            }
+          </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        const headerOffset = 160; 
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+  </script>
+</body>
+</html>
