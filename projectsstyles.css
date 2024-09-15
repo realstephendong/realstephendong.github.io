@@ -153,11 +153,17 @@ body {
 
 #proj1 {
   font-size: 40px;
-  color: lightblue;
+  color: lightcoral;
   padding: 0 0 5% 0;
 }
 
 #proj2 {
+  font-size: 40px;
+  color: lightblue;
+  padding: 0 0 5% 0;
+}
+
+#proj3 {
   font-size: 40px;
   color: lightgreen;
   padding: 0 0 5% 0;
